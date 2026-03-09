@@ -31,7 +31,13 @@ if (fechaActual < fechaInicio) {
     const diferenciaHoyInicio = Math.abs(fechaInicio - fechaActual);
     const diferenciaDiasHoyInicio = Math.floor(diferenciaHoyInicio / (1000 * 60 * 60 * 24));
 
-    previaQuedan.innerHTML = "quedan " + diferenciaDiasHoyInicio + " días"
+    if (diferenciaDiasHoyInicio > 1) {
+       previaQuedan.innerHTML = "quedan " + diferenciaDiasHoyInicio + " días"
+    } else {
+        previaQuedan.innerHTML = "queda " + diferenciaDiasHoyInicio + " día"
+    }
+
+    
     inicio.innerHTML = "para que sea " + fechaInicio.getDate() + " de " + mesNumeroPalabra(fechaInicio.getMonth()) + " de " + fechaInicio.getFullYear();
 }
 else {
