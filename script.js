@@ -43,12 +43,13 @@ if (fechaActual < fechaInicio) {
 else {
 
     const diasDesde = Math.floor(Math.abs(fechaActual - fechaInicio) / (1000 * 60 * 60 * 24));
+    console.log(diasDesde);
 
     if (diasDesde == 1) {
-        previaQuedan.innerHTML = "ya han pasado " + diasDesde + " día";
+        previaQuedan.innerHTML = "han pasado " + diasDesde + " día";
     }
     else {
-        previaQuedan.innerHTML = "ya ha pasado " + diasDesde + " días";
+        previaQuedan.innerHTML = "han pasado " + diasDesde + " días";
     }
 
     inicio.innerHTML = "desde " + fechaInicio.getDate() + " de " + mesNumeroPalabra(fechaInicio.getMonth()) + " de " + fechaInicio.getFullYear();
