@@ -42,6 +42,19 @@ if (fechaActual < fechaInicio) {
 }
 else {
 
+    const diasDesde = Math.floor(Math.abs(fechaActual - fechaInicio) / (1000 * 60 * 60 * 24));
+
+    if (diasDesde == 1) {
+        previaQuedan.innerHTML = "ya han pasado " + diasDesde + " día";
+    }
+    else {
+        previaQuedan.innerHTML = "ya ha pasado " + diasDesde + " días";
+    }
+
+    inicio.innerHTML = "desde " + fechaInicio.getDate() + " de " + mesNumeroPalabra(fechaInicio.getMonth()) + " de " + fechaInicio.getFullYear();
+
+
+
 }
 
 const diferenciaFecha = Math.abs(fechaFinal - fechaInicio);
@@ -49,7 +62,7 @@ const diferenciaFecha = Math.abs(fechaFinal - fechaInicio);
 // 1000 ms * 60 s * 60 m * 24 h
 const diferenciaDias = Math.floor(diferenciaFecha / (1000 * 60 * 60 * 24));
 
-dias.innerHTML = "luego quedan " + String(diferenciaDias) + " días";
+dias.innerHTML = "quedan " + String(diferenciaDias) + " días";
 
 fin.innerHTML = "para que sea " + fechaFinal.getDate() + " de " + mesNumeroPalabra(fechaFinal.getMonth()) + " de " + fechaFinal.getFullYear();
 
