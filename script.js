@@ -51,13 +51,13 @@ else {
     console.log(diasDesde);
 
     if (diasDesde == 1) {
-        previaQuedan.innerHTML = "ha pasado " + diasDesde + " día";
+        previaQuedan.innerHTML = "ha pasado " + diasDesde + " día desde";
     }
     else {
         previaQuedan.innerHTML = "han pasado " + diasDesde + " días";
     }
 
-    inicio.innerHTML = "desde " + fechaInicio.getDate() + " de " + mesNumeroPalabra(fechaInicio.getMonth()) + " de " + fechaInicio.getFullYear();
+    inicio.innerHTML = fechaInicio.getDate() + " " + mesNumeroPalabra(fechaInicio.getMonth()) + " " + fechaInicio.getFullYear();
 
 
 
@@ -68,9 +68,9 @@ const diferenciaFecha = Math.abs(fechaFinal - fechaActual);
 // 1000 ms * 60 s * 60 m * 24 h
 const diferenciaDias = Math.floor(diferenciaFecha / (1000 * 60 * 60 * 24));
 
-dias.innerHTML = "quedan " + String(diferenciaDias) + " días";
+dias.innerHTML = "quedan " + String(diferenciaDias) + " días para";
 
-fin.innerHTML = "para que sea " + fechaFinal.getDate() + " de " + mesNumeroPalabra(fechaFinal.getMonth()) + " de " + fechaFinal.getFullYear();
+fin.innerHTML = fechaFinal.getDate() + " " + mesNumeroPalabra(fechaFinal.getMonth()) + " " + fechaFinal.getFullYear();
 
 
 
