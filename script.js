@@ -54,7 +54,7 @@ else {
         previaQuedan.innerHTML = "ha pasado " + diasDesde + " día desde";
     }
     else {
-        previaQuedan.innerHTML = "han pasado " + diasDesde + " días";
+        previaQuedan.innerHTML = "han pasado " + diasDesde + " días desde";
     }
 
     inicio.innerHTML = fechaInicio.getDate() + " " + mesNumeroPalabra(fechaInicio.getMonth()) + " " + fechaInicio.getFullYear();
