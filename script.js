@@ -10,8 +10,8 @@ function mesNumeroPalabra(numero) {
 
 
 
-// fecha de inicio: 11 abril de 2026 a mediodía
-// fecha final: 11 abril 2030 a mediodía
+// fecha de inicio: 11 marzo de 2026 a mediodía
+// fecha final: 11 marzo 2030 a mediodía
 const fechaInicio = new Date(2026, 2, 11, 11, 0, 0);
 const fechaFinal = new Date(2030, 2, 11, 11, 0, 0);
 
