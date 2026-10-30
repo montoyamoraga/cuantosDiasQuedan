@@ -63,17 +63,22 @@ else {
 }
 
 
-const diferenciaFecha = Math.abs(fechaFinal - fechaActual);
+// sin Math.abs, para que sea negativa cuando ya pasó la fecha final
+const diferenciaFecha = fechaFinal - fechaActual;
 
 // 1000 ms * 60 s * 60 m * 24 h
 const diferenciaDias = Math.floor(diferenciaFecha / (1000 * 60 * 60 * 24));
 
 hasta.innerHTML = "hasta " + fechaFinal.getDate() + " " + mesNumeroPalabra(fechaFinal.getMonth()) + " " + fechaFinal.getFullYear();
 
-if (diferenciaDias > 1) {
+if (diferenciaFecha <= 0) {
+    vanQuedando.innerHTML = "ya no queda nada";
+} else if (diferenciaDias > 1) {
     vanQuedando.innerHTML = "quedan " + String(diferenciaDias) + " días";
+} else if (diferenciaDias == 1) {
+    vanQuedando.innerHTML = "queda " + String(diferenciaDias) + " día";
 } else {
-    quedan.innerHTML = "queda " + String(diferenciaDias) + " día";
+    vanQuedando.innerHTML = "queda menos de un día";
 }
 
 
